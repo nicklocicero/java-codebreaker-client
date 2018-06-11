@@ -14,6 +14,52 @@ public class Game {
   private URI href;
   @Expose(deserialize = true, serialize = false)
   private Date created;
+
+  public void setId(UUID id) {
+    this.id = id;
+  }
+
+  public void setHref(URI href) {
+    this.href = href;
+  }
+
+  public void setCreated(Date created) {
+    this.created = created;
+  }
+
+  public void setSurrendered(boolean surrendered) {
+    this.surrendered = surrendered;
+  }
+
+  public void setSolved(boolean solved) {
+    this.solved = solved;
+  }
+
+  public void setCode(String code) {
+    this.code = code;
+  }
+
+  public void setGuesses(List<Guess> guesses) {
+    this.guesses = guesses;
+  }
+
+  public Integer getLength() {
+
+    return length;
+  }
+
+  public String getCharacters() {
+    return characters;
+  }
+
+  public Boolean getRepitionAllowed() {
+    return repitionAllowed;
+  }
+
+  public List<Guess> getGuesses() {
+    return guesses;
+  }
+
   @Expose
   private Integer length;
   @Expose
@@ -44,7 +90,6 @@ public class Game {
 
   public UUID getId() {
     return id;
-
   }
 
   public URI getHref() {
